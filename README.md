@@ -128,3 +128,7 @@ Zeromq, est également indépendant des langages de programmation utilisés.
 - https://codeblog.dotsandbrackets.com/inter-service-messaging-with-zeromq-node-js/
 
 - http://zeromq.wdfiles.com/local--files/intro%3Aread-the-manual/Middleware%20Trends%20and%20Market%20Leaders%202011.pdf
+
+- http://www.geek-directeur-technique.com/2011/09/21/zeromq-la-super-bibliotheque-reseau
+
+- https://github.com/dreimert/dia-td2
