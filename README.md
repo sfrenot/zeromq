@@ -23,6 +23,9 @@ cd td-zeromq
 npm install zeromq
 ```
 
+## Avant de commencer 
+Ecrire une application client / serveur socket en js
+
 
 ## Démarrage du TD
 Q1 : Quels sont les modèles de communication que vous connaissez ?
