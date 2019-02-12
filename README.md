@@ -5,10 +5,8 @@ L'objectif de ce TD est de comprendre les idées principales de l'outil [ØMQ](h
 ## Environnement
 Nous utilisons nodejs pour les tests.
 La bibliothèque utilisée pour zeromq est le package node, zeromq.
-
 Comme toujours, nous allons réaliser tout cela dans /tmp.
-
-Lancez les commandes suivante pour installer l'environnement node
+Lancez les commandes suivante pour installer l'environnement node sur une machine unix du département.
 ```bash
 cd /tmp
 wget https://nodejs.org/dist/v8.9.4/node-v8.9.4-linux-x64.tar.xz
@@ -29,30 +27,30 @@ npm install zeromq
 ## Démarrage du TD
 Q1 : Quels sont les modèles de communication que vous connaissez ?
 
-Q2 : Quels est le modèle imposé par les protocoles issus de TPC ?
+Q2 : Quels est le modèle de temps imposé par les protocoles sur de TCP ?
 
 Q3 : Quelles sont les grandes lignes, et les grandes contraintes associées ?
 
 ## Premier domaine : le request / reply
 
-Le code suivant est un code serveur utilisant le domaine reply. (rep)  
+Le code suivant est un code serveur utilisant le domaine reply. (rep)
 
 ```javascript
 let zmq = require('zeromq');
-let server = zmq.socket('rep');
+let socket = zmq.socket('rep');
 
-server.on('message', function(request) {
+socket.on('message', function(request) {
   console.log(request.toString());
 })
 
-server.bindSync('tcp://*:6666');
+socket.bindSync('tcp://*:6666');
 ```
 
-Q4 : Ecrire le code client permettant d'envoyer un message sur le serveur. Pour cela :
+Q4 : Ecrire le code client permettant d'envoyer un message sur le serveur. Le code est très similaire au code serveur avec les adaptations suivantes :
 
 1) Il faut utiliser le domaine 'req'
 2) Utiliser la fonction de connexion connect sur
-3) Utiliser la fonction d'envoie de message send
+3) Utiliser la fonction d'envoi de message send
 
 Lancez le client et vérifiez qu'il fonctionne.
 
@@ -126,9 +124,6 @@ Zeromq, est également indépendant des langages de programmation utilisés.
 
 # Refs
 - https://codeblog.dotsandbrackets.com/inter-service-messaging-with-zeromq-node-js/
-
 - http://zeromq.wdfiles.com/local--files/intro%3Aread-the-manual/Middleware%20Trends%20and%20Market%20Leaders%202011.pdf
-
 - http://www.geek-directeur-technique.com/2011/09/21/zeromq-la-super-bibliotheque-reseau
-
 - https://github.com/dreimert/dia-td2
