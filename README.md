@@ -52,7 +52,7 @@ socket.bindSync('tcp://*:6666');
 Q4 : Ecrire le code client permettant d'envoyer un message sur le serveur. Le code est très similaire au code serveur avec les adaptations suivantes :
 
 1) Il faut utiliser le domaine 'req'
-2) Utiliser la fonction de connexion connect sur
+2) Utiliser la fonction de connexion `connect` sur le serveur
 3) Utiliser la fonction d'envoi de message send
 
 Lancez le client et vérifiez qu'il fonctionne.
