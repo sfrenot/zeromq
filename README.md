@@ -10,7 +10,7 @@ Lancez les commandes suivante pour installer l'environnement node sur une machin
 ```bash
 cd /tmp
 wget https://nodejs.org/dist/v8.9.4/node-v8.9.4-linux-x64.tar.xz
-tar zxvf node-v8.9.4-linux-x64.tar.xz
+tar xvf node-v8.9.4-linux-x64.tar.xz
 echo "export PATH=$(pwd)/node-v8.9.4-linux-x64/bin:$PATH" >> ~/.bashrc
 . ~/.bashrc
 ```
